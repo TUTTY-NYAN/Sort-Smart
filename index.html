@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Felipa&display=swap" rel="stylesheet">
@@ -19,7 +20,8 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">SortSmart</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -55,6 +57,61 @@
             </div>
         </nav>
     </header>
+
+
+
+
+        <div id="app">
+
+            <div class="brand display">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                </svg>
+                Sorted
+            </div>
+
+            <p class="tagline">Type what you're throwing away — find out which bin it goes in.</p>
+
+            <div class="search-row">
+                <input id="item-input" placeholder="e.g. plastic bottle" autocomplete="off" />
+                <button class="btn" id="check-btn">Check</button>
+            </div>
+
+            <div class="suggestions" id="suggestions"></div>
+
+            <div id="result-area"></div>
+
+            <div id="save-error-slot"></div>
+
+            <div class="totals-header">
+                <h3 class="display totals-title">Totals</h3>
+                <div class="range-toggle" id="range-toggle">
+                    <button class="range-btn active" data-range="week">Week</button>
+                    <button class="range-btn" data-range="month">Month</button>
+                    <button class="range-btn" data-range="year">Year</button>
+                    <button class="range-btn" data-range="all">All time</button>
+                </div>
+            </div>
+
+            <div class="totals-grid" id="totals-grid"></div>
+
+            <div class="history-header">
+                <h3 class="display history-title">Recent items</h3>
+                <button class="clear-btn" id="clear-history">Clear history</button>
+            </div>
+            <div id="history-list"></div>
+
+
+
+        </div>
+
+
+
+
+
+
 
 
 
