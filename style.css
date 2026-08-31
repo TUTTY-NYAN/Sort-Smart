@@ -1,0 +1,25 @@
+header {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background: aquamarine;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-right: 3rem;
+}
+
+.navbar-nav .nav-link {
+    font-size: small;
+    margin-right: 1.5rem;
+}
+
+.navbar-brand {
+    margin-left: 10px;
+}
+
+.navbar {
+    background: aquamarine;
+}
