@@ -740,3 +740,80 @@ main {
   margin-bottom: 18px;
   border-left: 4px solid #b87a4a;
 }
+/* =========================
+   MOBILE NAVBAR
+========================= */
+
+@media (max-width: 991px) {
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .navbar-collapse {
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+
+  .navbar-nav {
+    gap: 4px;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 2px 0;
+    padding: 10px 14px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link.active::after {
+    display: none;
+  }
+
+  .navbar .d-flex {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar .form-control {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .navbar .btn-outline-success {
+    padding: 8px 16px;
+    white-space: nowrap;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 8px 12px;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
+    padding: 9px 12px;
+  }
+
+  .navbar .d-flex {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .navbar .form-control {
+    width: 100%;
+  }
+
+  .navbar .btn-outline-success {
+    width: 100%;
+  }
+}
