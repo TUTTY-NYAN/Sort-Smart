@@ -2,7 +2,7 @@
   'use strict'
 
   var STREAMS = {
-   recycling: { label: 'Recycling', color: '#00ff00' },
+   recycling: { label: 'Recycling', color: '#019201a5' },
        compost: { label: 'Compost', color: '#ff9900' },
        landfill: { label: 'Landfill', color: '#ff0000' },
        hazardous: { label: 'Hazardous', color: '#adadeb' }
@@ -215,6 +215,11 @@
       keys: ['plant', 'leaves', 'grass clippings', 'yard waste', 'branches'],
       stream: 'compost',
       note: 'Yard waste is ideal compost material, or check for a municipal yard-waste pickup.'
+    },
+        {
+      keys: ['BestFriend','Best Friend'],
+      stream: 'hazardous',
+      note: 'sunogun na sila'
     }
   ]
 
