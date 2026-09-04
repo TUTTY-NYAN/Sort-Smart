@@ -1,119 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Felipa&family=Barlow+Semi+Condensed:wght@600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Felipa&family=Barlow+Semi+Condensed:wght@600;700&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css">
-    <title>Sort Smart</title>
-</head>
-
-<body>
-
-
+    <title>Document</title>
+  </head>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">SortSmart</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">How It Works</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Why Reduce Waste</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Waste Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Get Involved</a>
-                        </li>
-                    </ul>
-                </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">SortSmart</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
 
 
-                <div>
+              
+            </ul>
+          </div>
 
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-
-
-                </div>
-            </div>
-        </nav>
+          <div>
+            
+          </div>
+        </div>
+      </nav>
     </header>
 
+    <main>
+    <div class="app-wrapper">
+      <!-- Brand -->
+      <div class="brand">
+        <div class="brand-icon"><i class="bi bi-flower2"></i></div>
+        <div class="brand-text">Sort<span>Smart</span></div>
+      </div>
+      <p class="tagline">
+        <i class="bi bi-search" style="margin-right: 6px; color: #9a9287"></i>
+        Find out if it's bio, recyclable, or something else.
+        <small>tap any total to filter your list</small>
+      </p>
 
+      <!-- Search -->
+      <div class="search-row">
+        <input
+          id="item-input"
+          placeholder="e.g. banana peel, glass jar, battery..."
+          autocomplete="off"
+        />
+        <button class="btn-primary" id="check-btn">
+          <i class="bi bi-arrow-right"></i> Check
+        </button>
+      </div>
 
+      <!-- Suggestions -->
+      <div class="suggestions" id="suggestions"></div>
 
-    <div id="app">
+      <!-- Result -->
+      <div id="result-area"></div>
 
-        <div class="brand display">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8" />
-                <path d="m21 21-4.3-4.3" />
-            </svg>
-            Sorted
+      <!-- Save error -->
+      <div id="save-error-slot"></div>
+
+      <!-- Totals -->
+      <div class="totals-header">
+        <h3 class="totals-title">
+          <i
+            class="bi bi-pie-chart"
+            style="margin-right: 6px; color: #9a9287"
+          ></i
+          >Totals
+        </h3>
+        <div class="range-toggle" id="range-toggle">
+          <button class="range-btn active" data-range="week">Week</button>
+          <button class="range-btn" data-range="month">Month</button>
+          <button class="range-btn" data-range="year">Year</button>
+          <button class="range-btn" data-range="all">All</button>
         </div>
-
-        <p class="tagline">Type what you're throwing away — find out which bin it goes in.</p>
-
-        <div class="search-row">
-            <input id="item-input" placeholder="e.g. plastic bottle" autocomplete="off" />
-            <button class="btn" id="check-btn">Check</button>
-        </div>
-
-        <div class="suggestions" id="suggestions"></div>
-
-        <div id="result-area"></div>
-
-        <div id="save-error-slot"></div>
-
-        <div class="totals-header">
-            <h3 class="display totals-title">Totals</h3>
-            <div class="range-toggle" id="range-toggle">
-                <button class="range-btn active" data-range="week">Week</button>
-                <button class="range-btn" data-range="month">Month</button>
-                <button class="range-btn" data-range="year">Year</button>
-                <button class="range-btn" data-range="all">All time</button>
-            </div>
-        </div>
-
-        <div class="totals-grid" id="totals-grid"></div>
-
-        <div class="history-header">
-            <h3 class="display history-title">Recent items</h3>
-            <button class="clear-btn" id="clear-history">Clear history</button>
-        </div>
-        <div id="history-list"></div>
+      </div>
 
 
+      
+      <div class="totals-grid" id="totals-grid"></div>
 
+      <!-- History -->
+      <div class="history-header">
+        <h3 class="history-title">
+          <i
+            class="bi bi-clock-history"
+            style="margin-right: 4px; color: #9a9287"
+          ></i>
+          Recent
+          <span
+            id="filter-indicator"
+            class="filter-indicator"
+            style="display: none"
+          >
+            <span id="filter-label"></span>
+            <button
+              class="clear-filter"
+              id="clear-filter-btn"
+              title="Clear filter"
+            >
+              ✕
+            </button>
+          </span>
+        </h3>
+        <button class="clear-btn" id="clear-history">
+          <i class="bi bi-trash3"></i> Clear
+        </button>
+      </div>
+      <div id="history-list"></div>
     </div>
 
-    <script src="script.js"></script>
+
+      </main>
 
 
+<script src="script.js"></script>
 
-
-
-
-</body>
-
+  </body>
 </html>
