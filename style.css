@@ -818,9 +818,6 @@ main {
   }
 }
 
-/* =========================
-   RESPONSIVE NAVBAR
-========================= */
 
 .navbar {
   width: 100%;
@@ -830,14 +827,14 @@ main {
   width: 100%;
 }
 
-/* Desktop */
+
 @media (min-width: 992px) {
   .navbar-nav .nav-link {
     margin: 0 8px;
   }
 }
 
-/* Tablet and Phone */
+
 @media (max-width: 991px) {
 
   .navbar {
